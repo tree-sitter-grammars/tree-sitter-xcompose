@@ -122,6 +122,11 @@
     }
   },
   {
+    "type": "text",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "!",
     "named": false
   },
@@ -179,10 +184,6 @@
   },
   {
     "type": "octal",
-    "named": true
-  },
-  {
-    "type": "text",
     "named": true
   },
   {

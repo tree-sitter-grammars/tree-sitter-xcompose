@@ -79,9 +79,9 @@ module.exports = grammar({
 
     keysym: _ => /[A-Za-z0-9_]+/,
 
-    text: _ => /([^"]|\\")+/,
+    text: _ => repeat1(/[^"]|\\"/),
 
-    octal: _ => /\\[0-9]{3}/,
+    octal: _ => /\\[0-9]{1,3}/,
 
     hex: _ => /\\0?x[0-9a-fA-F]{2,4}/,
 

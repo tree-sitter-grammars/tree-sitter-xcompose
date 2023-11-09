@@ -19,7 +19,7 @@ include "%L"
       (keysym))
     (result
       (string
-        (text))
+        (octal))
       (keysym)))
   (sequence
     (event
