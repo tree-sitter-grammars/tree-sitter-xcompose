@@ -1,0 +1,39 @@
+{
+  "name": "tree-sitter-xcompose",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "XCompose grammar for tree-sitter",
+  "repository": "ObserverOfTime/tree-sitter-xcompose",
+  "author": {
+    "name": "ObserverOfTime",
+    "email": "chronobserver@disroot.org",
+    "url": "https://observeroftime.github.io/"
+  },
+  "keywords": [
+    "tree-sitter",
+    "parser",
+    "lexer"
+  ],
+  "scripts": {
+    "generate": "tree-sitter generate",
+    "parse": "tree-sitter parse",
+    "test": "tree-sitter test"
+  },
+  "main": "bindings/node",
+  "dependencies": {
+    "nan": "^2.18.0"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.20.8"
+  },
+  "tree-sitter": [
+    {
+      "scope": "text.xcompose",
+      "file-types": [
+        "Compose",
+        "XCompose",
+        ".XCompose"
+      ]
+    }
+  ]
+}
