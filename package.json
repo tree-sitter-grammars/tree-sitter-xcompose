@@ -1,9 +1,9 @@
 {
   "name": "tree-sitter-xcompose",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "description": "XCompose grammar for tree-sitter",
-  "repository": "ObserverOfTime/tree-sitter-xcompose",
+  "repository": "tree-sitter-grammars/tree-sitter-xcompose",
   "author": {
     "name": "ObserverOfTime",
     "email": "chronobserver@disroot.org",
@@ -24,7 +24,7 @@
     "nan": "^2.18.0"
   },
   "devDependencies": {
-    "tree-sitter-cli": "^0.20.8"
+    "tree-sitter-cli": "~0.21.0-pre-release-1"
   },
   "tree-sitter": [
     {
