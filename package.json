@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-xcompose",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "description": "XCompose grammar for tree-sitter",
   "repository": "tree-sitter-grammars/tree-sitter-xcompose",
@@ -12,10 +12,11 @@
   "keywords": [
     "tree-sitter",
     "parser",
-    "lexer"
+    "lexer",
+    "xcompose"
   ],
   "scripts": {
-    "generate": "tree-sitter generate",
+    "build": "tree-sitter generate --no-bindings",
     "parse": "tree-sitter parse",
     "test": "tree-sitter test"
   },
@@ -24,11 +25,12 @@
     "nan": "^2.18.0"
   },
   "devDependencies": {
-    "tree-sitter-cli": "~0.21.0-pre-release-1"
+    "tree-sitter-cli": "~0.21.0"
   },
   "tree-sitter": [
     {
       "scope": "text.xcompose",
+      "highlights": "queries/highlights.scm",
       "file-types": [
         "Compose",
         "XCompose",
