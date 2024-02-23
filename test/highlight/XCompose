@@ -1,0 +1,15 @@
+include "%L"
+# <- @keyword
+#       ^ @punctuation.delimiter
+#        ^^ @string.special
+#          ^ @punctuation.delimiter
+
+<dead_grave> <A> : "\300" Agrave
+#             ^ @constant
+#                ^ @punctuation.delimiter
+#                   ^^^^ @number
+#                         ^^^^^^ @constant
+
+ <Multi_key> <S> <s> : "¯\\_(ツ)_/¯" # SHRUG
+# ^^^^^^^^^ @constant
+#                       ^^^^^^^^^^^ @string
