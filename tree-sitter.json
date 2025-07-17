@@ -1,0 +1,33 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "xcompose",
+      "camelcase": "XCompose",
+      "title": "XCompose",
+      "scope": "text.xcompose",
+      "file-types": [
+        ".XCompose",
+        "XCompose",
+        "xcompose"
+      ],
+      "class-name": "TreeSitterXCompose",
+      "injection-regex": "^(XC|xc)ompose$",
+      "highlights": "queries/highlights.scm"
+    }
+  ],
+  "metadata": {
+    "version": "0.3.0",
+    "description": "XCompose grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "ObserverOfTime",
+        "email": "chronobserver@disroot.org"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/tree-sitter-grammars/tree-sitter-xcompose",
+      "funding": "https://github.com/sponsors/ObserverOfTime"
+    }
+  }
+}

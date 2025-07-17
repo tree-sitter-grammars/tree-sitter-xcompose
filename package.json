@@ -1,54 +1,52 @@
 {
   "name": "tree-sitter-xcompose",
   "version": "0.3.0",
-  "license": "MIT",
   "description": "XCompose grammar for tree-sitter",
-  "repository": "tree-sitter-grammars/tree-sitter-xcompose",
-  "author": "ObserverOfTime <chronobserver@disroot.org>",
+  "repository": "https://github.com/tree-sitter-grammars/tree-sitter-xcompose",
+  "funding": "https://github.com/sponsors/ObserverOfTime",
+  "license": "MIT",
+  "author": {
+    "name": "ObserverOfTime",
+    "email": "chronobserver@disroot.org"
+  },
   "main": "bindings/node",
   "types": "bindings/node",
   "keywords": [
+    "incremental",
+    "parsing",
     "tree-sitter",
-    "parser",
-    "lexer",
     "xcompose"
   ],
   "files": [
     "grammar.js",
+    "tree-sitter.json",
     "binding.gyp",
     "prebuilds/**",
     "bindings/node/*",
     "queries/*",
-    "src/**"
+    "src/**",
+    "*.wasm"
   ],
-  "scripts": {
-    "install": "node-gyp-build"
-  },
   "dependencies": {
-    "node-addon-api": "^8.0.0",
-    "node-gyp-build": "^4.8.1"
+    "node-addon-api": "^8.3.1",
+    "node-gyp-build": "^4.8.4"
   },
   "devDependencies": {
-    "tree-sitter-cli": ">=0.22.6",
-    "prebuildify": "^6.0.1"
+    "prebuildify": "^6.0.1",
+    "tree-sitter-cli": "^0.25.8"
   },
   "peerDependencies": {
-    "tree-sitter": "^0.21.1"
+    "tree-sitter": "^0.22.4"
   },
   "peerDependenciesMeta": {
-    "tree_sitter": {
+    "tree-sitter": {
       "optional": true
     }
   },
-  "tree-sitter": [
-    {
-      "scope": "text.xcompose",
-      "highlights": "queries/highlights.scm",
-      "file-types": [
-        "Compose",
-        "XCompose",
-        ".XCompose"
-      ]
-    }
-  ]
+  "scripts": {
+    "install": "node-gyp-build",
+    "prestart": "tree-sitter build --wasm",
+    "start": "tree-sitter playground",
+    "test": "node --test bindings/node/*_test.js"
+  }
 }

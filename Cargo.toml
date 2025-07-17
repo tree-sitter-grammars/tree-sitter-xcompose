@@ -2,23 +2,33 @@
 name = "tree-sitter-xcompose"
 description = "XCompose grammar for tree-sitter"
 version = "0.3.0"
+authors = ["ObserverOfTime <chronobserver@disroot.org>"]
 license = "MIT"
 readme = "README.md"
-authors = ["ObserverOfTime <chronobserver@disroot.org>"]
 keywords = ["incremental", "parsing", "tree-sitter", "xcompose"]
-categories = ["parsing", "text-editors"]
+categories = ["parser-implementations", "parsing", "text-editors"]
 repository = "https://github.com/tree-sitter-grammars/tree-sitter-xcompose"
 edition = "2021"
 autoexamples = false
 
 build = "bindings/rust/build.rs"
-include = ["bindings/rust/*", "grammar.js", "queries/*", "src/*"]
+include = [
+  "bindings/rust/*",
+  "grammar.js",
+  "queries/*",
+  "src/*",
+  "tree-sitter.json",
+  "/LICENSE",
+]
 
 [lib]
 path = "bindings/rust/lib.rs"
 
 [dependencies]
-tree-sitter = ">=0.22.6"
+tree-sitter-language = "0.1"
 
 [build-dependencies]
-cc = "1.0.87"
+cc = "1.2"
+
+[dev-dependencies]
+tree-sitter = "0.25.8"
