@@ -1,6 +1,6 @@
 LANGUAGE_NAME := tree-sitter-xcompose
 HOMEPAGE_URL := https://github.com/tree-sitter-grammars/tree-sitter-xcompose
-VERSION := 0.3.0
+VERSION := 0.4.0
 
 # repository
 SRC_DIR := src
